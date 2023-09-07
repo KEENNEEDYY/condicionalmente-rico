@@ -9,5 +9,11 @@ public class Main {
     int valorSaque = scanner.nextInt();
 
     //TODO: Criar as condições necessárias para impressão da saída, vide tabela de exemplos.
+    if (saldoTotal >= valorSaque) {
+      saldoTotal-=valorSaque;
+      System.out.println("Saque realizado com sucesso. Novo saldo: "+saldoTotal);
+    } else {
+      System.out.println("Saldo insuficiente. Saque nao realizado!");
+    }
   }
 }
