@@ -1,18 +1,33 @@
-## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+# Descrição
 
-## Folder Structure
+Uma nova feature para um sistema bancário foi analisada pela equipe de desenvolvimento e será uma das tarefas a serem trabalhadas durante a sprint, como desenvolvedor da empresa você recebeu os requisitos para a nova implementação que consiste em uma solução algorítmica que permita aos clientes realizarem saques em caixas eletrônicos. No entanto, existem algumas regras a serem seguidas para garantir que um saque possa ser realizado com sucesso.
 
-The workspace contains two folders by default, where:
+**Regras do saque:**
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- Cada cliente digitará o valor do seu saldoTotal de sua conta bancária e o valorSaque.
+- Um saque só pode ser realizado se o saldoDisponível na conta for igual ou superior ao valor solicitado.
+- Se o saldo for suficiente, o valor solicitado deve ser subtraído do saldo disponível, indicando que o saque foi realizado.
+- Se o saldo for insuficiente, o saque não deve ser realizado e uma mensagem adequada deve ser exibida.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+# ****Entrada****
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+A entrada consiste em dois valores inteiros que representam o total do `saldo` da conta e o `valor` do saque.
 
-## Dependency Management
+# Saída
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Seu programa deve exibir a lista de Ativos organizada em ordem alfabética. Cada ativo deve ser apresentado em uma linha separada.
+
+Se o saque for realizado com sucesso, exibir a mensagem "`Saque realizado com sucesso! Novo saldo: {saldo}`", onde `{saldo}` é o novo saldo disponível na conta.
+
+Se o saque não for possível devido a saldo insuficiente, exibir a mensagem "`Saldo insuficiente. Saque nao realizado!`"
+
+# Exemplos
+
+A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectivas saídas esperadas. Certifique-se de testar seu programa com esses exemplos e com outros casos possíveis.
+
+| Entrada | Saída |
+| --- | --- |
+|  1000 200 | Saque realizado com sucesso! Novo saldo: 800 |
+| 15001800 | Saldo insuficiente. Saque nao realizado! |
+| 300200 | Saque realizado com sucesso. Novo saldo: 100 |
